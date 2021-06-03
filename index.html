@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>wine shop</title>
+
+    <!-- script -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.rwdImageMaps.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <style>
+        header {
+            background-image: url("img/nav.png") !important;
+            background-size: 100% !important;
+        }
+
+        main {
+            background-image: url("img/background.png") !important;
+            background-size: 100% !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .card {
+            background-image: url("img/itemback.png");
+        }
+
+        footer {
+            background-image: url("img/nav.png") !important;
+            background-size: 100% !important;
+        }
+
+        strong {
+            font-family: 'Courgette', cursive;
+            letter-spacing: .5rem;
+            color: black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar navbar-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center">
+                            <strong class="me-2 fs-3" style="color: white;">COZY TIME</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="">
+                            <button type="button" class="btn" >
+                                <i class="fas fa-shopping-cart fa-lg" style="color: white;"></i>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fas fa-user-alt fa-lg" style="color: white;"></i>
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">Log in</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Username:</label>
+                                                <input type="text" class="form-control" id="recipient-name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Password:</label>
+                                                <input type="text" class="form-control" id="recipient-name2" required>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary text-center"
+                                                data-bs-dismiss="modal" style="letter-spacing: .3rem;">CLOSE</button>
+                                            <button class="btn btn-primary text-center" style="letter-spacing: .3rem;"
+                                                type="submit">SUBMIT</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button class="navbar-toggler" onclick="openNav()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content ">
+                            <ul class="nav nav-tabs justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="aboutus.html">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Wines</a>
+                                    <ul class="dropdown-menu text-center">
+                                        <li><a class="dropdown-item" href="product.html">All wines</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="red.html">Red Wine</a></li>
+                                        <li><a class="dropdown-item" href="white.html">White Wine</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Sparkling Wine</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Country</a>
+                                    <ul class="dropdown-menu text-center" style="min-width: 17rem;">
+                                        <li><a class="dropdown-item" href="product.html">Europe</a></li>
+                                        <li><a class="dropdown-item" href="red.html">French</a></li>
+                                        <li><a class="dropdown-item" href="white.html">Italy</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Germany</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">United States</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Argentina</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="member.html">Member Profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <img src="img/finalmap2.png" alt="" width="2520" height="1889" usemap="#Map" class="img-fluid" />
+            <map name="Map">
+                <area shape="poly"
+                    coords="1590,609,1619,621,1674,619,1676,627,1679,637,1682,648,1686,661,1678,668,1664,676,1651,684,1635,688,1614,688,1606,691,1601,696,1589,697,1558,681,1565,667,1556,652,1552,629,1580,620"
+                    href="#F" alt="F">
+                <area shape="poly"
+                    coords="1650,543,1663,550,1668,542,1676,548,1690,549,1696,553,1713,553,1720,546,1720,522,1735,530,1747,541,1749,568,1746,596,1744,618,1746,652,1732,650,1710,652,1689,657,1677,620,1649,617,1634,618,1622,597,1632,587,1633,578,1629,572,1634,554"
+                    href="#G" alt="G">
+                <area shape="poly"
+                    coords="608,620,654,611,686,617,720,605,766,606,794,589,828,582,869,586,918,577,922,602,926,620,934,618,937,601,938,576,966,571,1004,571,1040,574,1070,574,1095,586,1075,618,1059,629,1050,625,1035,633,1020,649,1026,656,1040,648,1049,657,1054,665,1063,673,1063,681,1075,696,1066,707,1057,717,1048,724,1038,718,1034,693,1027,686,1022,705,1027,715,1032,721,1026,726,1010,717,1002,720,984,743,971,762,966,785,963,810,957,816,947,824,938,845,938,871,946,891,946,910,940,914,914,893,914,874,898,864,882,858,881,874,873,879,836,869,813,864,764,853,730,835,685,837,658,809,645,786,643,762,635,721,635,685,638,667,623,654,614,654,607,642"
+                    href="#USA" alt="USA">
+                <area shape="poly"
+                    coords="1679,673,1697,661,1724,654,1742,659,1759,667,1774,681,1765,695,1754,713,1759,727,1750,726,1737,729,1732,720,1729,724,1738,759,1742,772,1734,772,1729,781,1722,797,1718,790,1726,769,1719,750,1706,731,1706,712,1693,703,1678,681"
+                    href="#I" alt="I">
+                <area shape="poly"
+                    coords="1014,1415,1047,1422,1060,1441,1086,1453,1072,1473,1074,1511,1059,1534,1052,1553,1037,1557,1031,1571,1017,1581,1006,1601,1002,1625,994,1636,998,1672,986,1685,972,1700,955,1668,961,1624,970,1565,980,1537,978,1494,977,1475,1002,1443"
+                    href="#Z" alt="Z">
+            </map>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container py-1">
+            <div class="row">
+                <div class="col-sm mycol">
+                    <ul class="list-group">
+                        <li class="list-group-item align-items-center border-0 text-center"
+                            style="font-weight: bolder;">
+                            CONTACT US
+                        </li>
+                        <li class="list-group-item align-items-center border-0 ps-6">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                            <span>地址：320桃園市中壢區中北路200號</span>
+                        </li>
+                        <li class="list-group-item  align-items-center border-0 ps-6">
+                            <a href="https://im.cycu.edu.tw/" style>
+                                <i class="fas fa-school fa-lg"></i>
+                                <span>學系：中原大學資訊管理學系</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item align-items-center border-0 ps-6">
+                            <a href="tel:+88632655401">
+                                <i class="fas fa-phone fa-lg"></i>
+                                <span>電話：+88632655401</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm text-center">
+                    <img class="img-fluid" style="border-radius: 1rem;" width="160" height="160" src="img/flogo.svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
