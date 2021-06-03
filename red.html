@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>wine shop</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <style>
+        header {
+            background-image: url("img/nav.png") !important;
+            background-size: 100% !important;
+        }
+
+        main {
+            background-image: url("img/background.png") !important;
+            background-size: 100% !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .card {
+            background-image: url("img/itemback.png");
+        }
+
+        footer {
+            background-image: url("img/nav.png") !important;
+            background-size: 100% !important;
+        }
+
+        strong {
+            font-family: 'Courgette', cursive;
+            font-size: larger;
+            letter-spacing: .5rem;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <a href="index.html" class="navbar-brand d-flex align-items-center">
+                            <strong class="me-2" style="color: white;">COZY TIME</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="">
+                            <button type="button" class="btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fas fa-user-alt"></i>
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">Log in</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Username:</label>
+                                                <input type="text" class="form-control" id="recipient-name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Password:</label>
+                                                <input type="text" class="form-control" id="recipient-name2" required>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary text-center"
+                                                data-bs-dismiss="modal" style="letter-spacing: .3rem;">CLOSE</button>
+                                            <button class="btn btn-primary text-center" style="letter-spacing: .3rem;"
+                                                type="submit">SUBMIT</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button class="navbar-toggler" onclick="openNav()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content ">
+                            <ul class="nav nav-tabs justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="aboutus.html">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Wines</a>
+                                    <ul class="dropdown-menu text-center">
+                                        <li><a class="dropdown-item" href="product.html">All wines</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="red.html">Red Wine</a></li>
+                                        <li><a class="dropdown-item" href="white.html">White Wine</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Sparkling Wine</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Country</a>
+                                    <ul class="dropdown-menu text-center" style="min-width: 17rem;">
+                                        <li><a class="dropdown-item" href="product.html">Europe</a></li>
+                                        <li><a class="dropdown-item" href="red.html">French</a></li>
+                                        <li><a class="dropdown-item" href="white.html">Italy</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Germany</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">United States</a></li>
+                                        <li><a class="dropdown-item" href="sparkling.html">Argentina</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="member.html">Member Profile</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Red -->
+
+        <section class="pt-3 text-center">
+            <div class="container">
+                <div class="row">
+                    <h1 style="color: white;text-decoration: underline;">RED WINE</h1>
+                </div>
+            </div>
+        </section>
+        <section class="py-3">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/ar1.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Zuccardi Valle de Uco</h5>
+                                    <h5 class="card-title">NAME : ZUCCARDI Q MALBEC</h5>
+                                    <p class="card-text">
+                                        深寶石紅色澤，酒體帶有成熟濃厚深色水果香味，經橡木桶醇化後，帶有煙草及巧克力的味道，強烈滿足飽滿的口感，令人驚嘆這從水晶般的藍天覆蓋的美酒。</p>
+                                    <p class="card-text">NT$ 2659</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/ar2.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Zuccardi Valle de Uco</h5>
+                                    <h5 class="card-title">NAME : ZUCCARDI Q CONCRETO MALBEC</h5>
+                                    <p class="card-text">特殊的發酵方式-採Paraje
+                                        Altamira的石灰質土壤從中發酵，隨著時間推移，風味層層堆疊，呈深濃的牡丹色，擁有令人難以置信的價值。
+                                    </p>
+                                    <p class="card-text">NT$ $1500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/ar3.png" class="img-fluid py-3 img-ar3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Robert Mondavi</h5>
+                                    <h5 class="card-title">NAME : <span class="fs-6">CABERNET SAUVIGNON STAGS LEAP
+                                            DISTRICT</span></h5>
+                                    <p class="card-text">
+                                        加州宜人的天氣培養出最好的葡萄。黑莓、黑李子、紅櫻桃和活潑的香料在鼻尖飄蕩。在口感上，明亮可口的香草優雅地包裹在可愛的深色水果風味中。
+                                    </p>
+                                    <p class="card-text">NT$ $1500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/ar4.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Robert Mondavi</h5>
+                                    <h5 class="card-title">NAME : PINOT NOIR NAPA VALLEY</h5>
+                                    <p class="card-text">
+                                        使用嬌貴優雅的黑皮諾，有著明亮的黑紅櫻桃香氣，加入蔓越莓般的熱情滋味將風味提升到另一個層次，最後化為新鮮肉豆蔻和森林大地複雜的氣息。</p>
+                                    <p class="card-text">NT$ $1500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/ar5.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Robert Mondavi</h5>
+                                    <h5 class="card-title">NAME : <span class="fs-7">RESERVE TO KALON VINEYARD CABERNET
+                                            SAUVIGNON</span></h5>
+                                    <p class="card-text">新鮮黑莓、野生漿果蜜餞、黑醋栗、黑可可粉、香料和甜香草的複雜混合，酸度平衡，使其成為一款完美的周年紀念酒。向傳奇的Robert
+                                        Mondavi致敬。</p>
+                                    <p class="card-text">NT$ $3980</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/er1.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : CHÂTEAU SMITH HAUT LAFITT</h5>
+                                    <h5 class="card-title">BRAND : CHÂTEAU SMITH HAUT LAFITT RED</h5>
+                                    <p class="card-text">成熟而誘人的黑醋栗、李子泥和黑莓蜜餞的味道在整個過程中佔據主導地位，同時伴隨著誘人的鹹味、甘草、溫暖的壤土和礦物質的味道。
+                                    </p>
+                                    <p class="card-text">NT$ $3980</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/er2.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Marchesi Antinori</h5>
+                                    <h5 class="card-title">BRAND : Badia a Passignano</h5>
+                                    <p class="card-text">
+                                        強烈的紅寶石紅葡萄酒，帶有紫羅蘭色的反射，黑櫻桃，草莓和覆盆子的香氣與典型的木質香氣完美融合。它充滿活力，甜美，並具有持久而美味的持久性。</p>
+                                    <p class="card-text">NT$ $1100</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/er3.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Marchesi Antinori</h5>
+                                    <h5 class="card-title">NAME : II Bruciato</h5>
+                                    <p class="card-text">Bruciato 是一款無需介紹的葡萄酒，它為將 Bolgheri
+                                        的知識傳播到全世界做出了貢獻。作為其領土上的標誌性葡萄酒，Tenuta Guado al Tasso 的 Bruciato 真的是一個神話！</p>
+                                    <p class="card-text">NT$ $1100</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="col py-3">
+                            <div class="card shadow-sm">
+                                <div class="container text-center">
+                                    <img src="img/red/er4.png" class="img-fluid py-3" width="150" height="auto"
+                                        alt="red/ar1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">BRAND : Marchesi Antinori</h5>
+                                    <h5 class="card-title">NAME : Pian delle Vigne</h5>
+                                    <p class="card-text">
+                                        明亮的紅寶石色，隨著葡萄酒在杯中甦醒逐漸綻放耀眼的光彩，散發著成熟水果的香氣，木瓜果醬和李子的香氣，散發著型花香和木材老化產生的烤製香氣。</p>
+                                    <p class="card-text">NT$ $799</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--row-->
+            </div>
+            <!--container-->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container py-1">
+            <div class="row">
+                <div class="col-sm mycol">
+                    <ul class="list-group">
+                        <li class="list-group-item align-items-center border-0 text-center"
+                            style="font-weight: bolder;">
+                            CONTACT US
+                        </li>
+                        <li class="list-group-item align-items-center border-0 ps-6">
+                            <i class="fas fa-map-marker-alt fa-1x"></i>
+                            <span>地址：320桃園市中壢區中北路200號</span>
+                        </li>
+                        <li class="list-group-item  align-items-center border-0 ps-6">
+                            <a href="https://im.cycu.edu.tw/" style>
+                                <i class="fas fa-school fa-1x"></i>
+                                <span>學系：中原大學資訊管理學系</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item align-items-center border-0 ps-6">
+                            <a href="tel:+88632655401">
+                                <i class="fas fa-phone fa-1x"></i>
+                                <span>電話：+88632655401</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm text-center">
+                    <img class="img-fluid" style="border-radius: 1rem;" width="160" height="160" src="img/flogo.svg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>
